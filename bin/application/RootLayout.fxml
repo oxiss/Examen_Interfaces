@@ -64,7 +64,7 @@
                   <Image url="@../../img/profilephoto.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="47.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+            <ImageView fitHeight="47.0" fitWidth="57.0" onMouseClicked="#nuevaVentana" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                <image>
                   <Image url="@../../img/send.png" />
                </image>

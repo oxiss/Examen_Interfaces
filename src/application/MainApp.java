@@ -12,7 +12,9 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
 
     private Stage primaryStage;
+    private Stage secondStage;
     private AnchorPane rootLayout;
+    private AnchorPane segundapantalla;
 
     @Override
     public void start(Stage primaryStage) {
@@ -33,7 +35,6 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("RootLayout.fxml"));
             rootLayout = (AnchorPane) loader.load();
-
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
@@ -45,8 +46,6 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
-
-
     /**
      * Returns the main stage.
      * @return
@@ -60,6 +59,21 @@ public class MainApp extends Application {
  */
     public static void main(String[] args) {
         launch(args);
+    }
+    
+    public void mostrarVentanaSecundaria() {
+        try {
+        	FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("SegundaPantalla.fxml"));
+            segundapantalla = (AnchorPane) loader.load();
+            // Show the scene containing the root layout.
+            Scene scene = new Scene(segundapantalla);
+            secondStage.setScene(scene);
+            secondStage.show();
+ 
+        } catch (Exception e) {
+            //tratar la excepción
+        }
     }
     
     
